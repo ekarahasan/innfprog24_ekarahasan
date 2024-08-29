@@ -6,12 +6,22 @@
     <title>Variables Cheat Sheet</title>
 </head>
 <body>
-    
+    <p id="nameprint"></p>
+    <p id="calculation">0</p>
+    <p id="nameprint_temlit"></p>
 
     <script>
         //Vår første javascipt-kommentar. Og under, vår aller første variabel:
         const firstname = "Emina"
-        
+        //Skriver ut firstname til konsollen
+        console.log(firstname)
+        //Skriver ut firstname til HTML med konkatinering
+        document.getElementById("nameprint").innerHTML = "Hei " + firstname
+        //Skriver ut firstname til HTML med template literal
+        document.getElementById("nameprint_templit").innerHTML = 
+
+        //Skrive ut et enkelt mattestykke
+        document.ElementById("calculation").innerHTML = 10+5
 
     </script>
 </body>
