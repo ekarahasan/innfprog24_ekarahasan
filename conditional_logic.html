@@ -8,6 +8,8 @@
 <body>
     <h2>Er du gammel nok til å kjøpre bil?</h2>
     <p id="carmessage"></p>
+    <h2>Kan spilleren åpne døren?</h2>
+    <p id="doormessage">Velg dør for å sjekke</p>
     
     <script>
         const age = 18
@@ -18,6 +20,22 @@
             document.getElementById("carmessage").innerHTML = "Ja"
         } else {
             document.getElementById("carmessage").innerHTML = "Nei"   
+        }
+
+        //Vi skal sjekke om en dør er låst, og om spilleren eventuelt har nøkkel for å låse opp.
+        const door1_locked = true
+        const door2_locked = false
+        const backpack = ""
+        let doormsg = document.getElementById("doormessage")
+        console.log(doormsg)
+        if(door2_locked === false) {
+            doormsg.innerHTML = "Ja"   
+        } else {
+            if(backpack === "key") {
+                doormsg.innerHTML = "Ja"
+            } else {
+                doormsg.innerHTML = "Nei"
+            }
         }
     </script>
 </body>
