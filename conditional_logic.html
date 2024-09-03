@@ -14,7 +14,7 @@
     <p id="retire"></p>
     
     <script>
-        const age = 18
+        const age = 104
         const passed = true
 
         //If-test for å sjekke om vi er gamle nok:
@@ -42,7 +42,11 @@
 
         //Vi skal sjekke om jeg kan pensjonere meg nå. Evt sjekk av mulig pensjonsalder:
         if(age>= 62 && age < 67) {
-
+            document.getElementById("retire").innerHTML = "Du kan gå av med AFP."
+        } else if(age >= 67) {
+            document.getElementById("retire").innerHTML = "Du kan gå av med full pensjon."   
+        } else {
+            document.getElementById("retire").innerHTML = `Du kan gå av med AFP om ${62 - age} år, og full pensjon om ${67 - age} år.`
         }
     </script>
 </body>
