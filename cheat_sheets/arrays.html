@@ -8,12 +8,21 @@
 <body>
     <h2>Arrayer</h2>
     <p>Dette jukse arket funger best med konsollen åpen</p>
-    <h3>Filmarray</h3>
-    <p>Film på index 3: <span id="Movietitle">?</span></p>
+    <h3>Filmarray (<span id="moviecount">0</span> filmer)</h3>
+    <p>Film på index 3: <span id="movietitle">?</span></p>
     
     <script>
         //Opprette en array med filmtitler
+        const moviearray = ["Interstellar", "Die hard", "Minions", "Top Gun", "Titanic", "Avengers", "Cool runnings"]
+        //Skriv ut film med index 3:
+        const index = 3
+        document.getElementById("movietitle").innerHTML = moviearray[index]
+        //Skriv ut antall filmer:
+        document.getElementById("moviecount").innerHTML = moviearray.length
         
+
+        //Vis moviearray i konsoll:
+        console.log(moviearray)
     </script>
 </body>
 </html>
