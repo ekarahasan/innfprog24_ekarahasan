@@ -14,9 +14,6 @@
     <script>
         //Opprette en array med filmtitler
         const moviearray = ["Interstellar", "Die hard", "Minions", "Top Gun", "Titanic", "Avengers", "Cool runnings"]
-        //Skriv ut film med index 3:
-        const index = 3
-        document.getElementById("movietitle").innerHTML = moviearray[index]
         
         //Å legge til et element på slutten av en array
         moviearray.push("Spiderman")
@@ -26,7 +23,9 @@
 
           //Skriv ut antall filmer:
           document.getElementById("moviecount").innerHTML = moviearray.length
-
+          //Skriv ut film med index 3:
+          const index = 3
+        document.getElementById("movietitle").innerHTML = moviearray[index]
         //Vis moviearray i konsoll:
         console.log(moviearray)
     </script>
