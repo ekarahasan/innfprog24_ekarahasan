@@ -17,9 +17,15 @@
         //Skriv ut film med index 3:
         const index = 3
         document.getElementById("movietitle").innerHTML = moviearray[index]
-        //Skriv ut antall filmer:
-        document.getElementById("moviecount").innerHTML = moviearray.length
         
+        //Å legge til et element på slutten av en array
+        moviearray.push("Spiderman")
+        //Å slette en film (med en bestemt index)
+        moviearray.splice(3, 1)
+
+
+          //Skriv ut antall filmer:
+          document.getElementById("moviecount").innerHTML = moviearray.length
 
         //Vis moviearray i konsoll:
         console.log(moviearray)
