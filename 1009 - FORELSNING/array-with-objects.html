@@ -40,6 +40,18 @@
            }
         ]
 
+        /*
+            Vi skal skrive ut hver foreleser i arrayen som et listepunkt: <li>
+                Vi må gå gjennom hele arrayen: .map
+                Når vi .mapper, må vi mellomlagre element i en variabel: lecturer
+                For hver lecturer, må vi legge til en <li> i <ul id="profiles">
+        */
+       lecturer.map(lecturer=> document.getElementById("profiles").innerHTML += `<li>${lecturer.personname}
+        <ul>
+            ${lecturer.courses.map(course => `<li>$(course)</li>`)}
+        </ul>
+        </li>`)
+        
 
 
         //document.getElementById("contactinfo").innerHTML = `${lecturer.personname} sitter på kontor ${lecturer.office}. Hun kan kontaktes på Epost: ${lecturer.email} Favoritt kurset hennes er ${lecturer.courses[1]}.`
