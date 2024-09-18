@@ -84,7 +84,7 @@
         <div id="celle7" class="celle"></div>
         <div id="celle8" class="celle"></div>
     </section>
-    <button id="newgame" onclick=("restartGame")>Start spill på nytt</button>
+    <button id="newgame" onclick = "restartGame()">Start spill på nytt</button>
     
 
 
@@ -231,7 +231,7 @@
                 //Når spillerens tur er ferdig, er det neste spillers tur.
                 //Det viser vi ved å sette variabelen "player" til 2 hvis den var 1 denne turen, eller hvis den var 2, sett tilbake til 1.
                 //På samme måte må spillersymbolet veksles mellom X og O.
-                if (player === 1) {
+                if (player == 1) {
                     player = 2;
                     playermark = "O";
                 } else {
