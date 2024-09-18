@@ -84,7 +84,9 @@
         <div id="celle7" class="celle"></div>
         <div id="celle8" class="celle"></div>
     </section>
-    <button id="newgame" onclick="restartGame()">Start spill på nytt</button>
+    <button id="newgame" onclick=("restartGame")>Start spill på nytt</button>
+    
+
 
     <script>
         /* For å forstå hvorfor vi har celle-IDene 0 - 8 i HTML-koden over:
@@ -188,7 +190,7 @@
             if(spillStatus === true) {
                 //Er cellen ledig? Vi må sjekke hvilken celle som er trykket på,
                 //for så å sjekke om innholdet er en tom streng:
-                var cellSpace = document.getElementById("celle"+celle).innerHTML;
+                var cellSpace = document.getElementById("celle" + celle).innerHTML;
                 
                 //Hvis den er ledig...
                 if(cellSpace === "") {
