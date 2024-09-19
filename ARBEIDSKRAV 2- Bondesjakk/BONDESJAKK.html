@@ -191,7 +191,7 @@
                 var cellSpace = document.getElementById("celle"+celle).innerHTML;
                 
                 //Hvis den er ledig...
-                ifff(cellSpace === "") {
+                if(cellSpace === "") 
                     //...sjekk hvilken spiller sin tur det er, og plasser riktig symbol på spillerbrettet
                     if (player === 1) {
                         //Plasser symbol på spillerbrettet i nettleseren
@@ -226,6 +226,7 @@
                 //Når spillerens tur er ferdig, er det neste spillers tur.
                 //Det viser vi ved å sette variabelen "player" til 2 hvis den var 1 denne turen, eller hvis den var 2, sett tilbake til 1.
                 //På samme måte må spillersymbolet veksles mellom X og O.
+                
                 if (player === 1) {
                     player = 2;
                     playermark = "O";
@@ -238,11 +239,11 @@
                     document.getElementById("playermark").innerHTML = playermark;
                 }
             //Hvis spillstatus er false, avslutter vi funksjonen uten å utføre noen handlinger.
-            } else {
-                /Så returnerer vi spillet
+         
+                //Så returnerer vi spillet
                 return;
             }
-        }
+        
 
         function sjekkVinner() {
             var rundenVunnet = false;
