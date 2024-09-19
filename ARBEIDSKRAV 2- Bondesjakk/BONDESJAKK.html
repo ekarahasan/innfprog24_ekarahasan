@@ -83,6 +83,7 @@
         <div id="celle6" class="celle"></div>
         <div id="celle7" class="celle"></div>
         <div id="celle8" class="celle"></div>
+        
     </section>
     <button id="newgame" onclick="restartGame()">Start spill på nytt</button>
 
@@ -248,6 +249,8 @@
         function sjekkVinner() {
             var rundenVunnet = false;
             //Vi må sjekke etter vinner for hver brikke som plasseres på brettet.
+            setTimeout(function() {sjekkVinner("param1","param2")}, 1000);
+
             // Dette gjør vi ved å gå gjennom alle vinnerkombinasjonene, og
             //sjekke om brikkene på spillbrettet er like ved indexene til vinnerkombinasjonene:
             for(var combination = 0; combination <= 7; combination++) {
