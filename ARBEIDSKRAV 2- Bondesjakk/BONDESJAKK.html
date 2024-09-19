@@ -277,6 +277,8 @@
             if(rundenVunnet === true) {
                 //Skriv ut hvilken spiller som har vunnet
                 document.getElementById("playerturn").innerHTML = "Spiller " + player + " har vunnet!";
+                //Endre bakgrunnsfargen med id playerturn til gullfarget når en spiller har vunnet
+                document.getElementById("playerturn").style.backgroundColor = "gold";
                 //Gjør restart spill-knappen synlig
                 document.getElementById("newgame").style.display = "block";
                 //Sett spillstatus til false, slik at ingen spillere får plassere
