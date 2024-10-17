@@ -20,7 +20,7 @@
         }
         
         #playerturn {
-            color: #34495e;
+            color: #385e34;
             font-size: 3em;
             margin: 20px auto;
             max-width: 600px;
@@ -28,12 +28,14 @@
             border-radius: 5px;
         }
         
+        
+
         #gamearea {
             width: 600px;
             height: 600px;
             margin: 0 auto;
             background-color: #34495e;
-            color: #fff;
+            color: #a61add;
             border: 6px solid #2c3e50;
             border-radius: 10px;
             display: grid;
@@ -50,6 +52,8 @@
             align-items: center;
         }
 
+       
+
         #newgame {
             width: 300px;
             padding: 20px;
@@ -63,7 +67,7 @@
             display: none;
         }
         #newgame:hover {
-            background: #364e01;
+            background: #e6c301;
             color: white;
             cursor: pointer;
         }
@@ -246,8 +250,10 @@
 
         function sjekkVinner() {
             var rundenVunnet = false;
+
+            
             //Vi må sjekke etter vinner for hver brikke som plasseres på brettet.
-            setTimeout(function() {myFunc("brikke1", "brikke2", "brikke3") }, 1000);
+            setTimeout(function() {(sjekkVinner()).newgame(); }, 1000);
             // Dette gjør vi ved å gå gjennom alle vinnerkombinasjonene, og
             //sjekke om brikkene på spillbrettet er like ved indexene til vinnerkombinasjonene:
             for(var combination = 0; combination <= 7; combination++) {
@@ -272,6 +278,10 @@
                     break;
                 }
             }
+        function addColor(brikke) {
+            if (winningCombos == "X")
+            celle.style.color ="#FFD700"
+        }    
 
             //Hvis runden er vunnet, skal vi gjøre noen handlinger:
             if(rundenVunnet === true) {
@@ -280,7 +290,7 @@
                 //Gjør om bakgrunnsfargen når en spiller har vunnet
                 document.getElementById("playerturn").style.backgroundColor = "#FFD700";
                 //Sett fargen på spillermerkene i spillrekken til gullfarget
-                document.getElementById("gamearea").style.color = "#FFD700";
+                document.getElementById("gamearea").style.color = "#fff";
                 //Gjør restart spill-knappen synlig
                 document.getElementById("newgame").style.display = "block";
                 //Sett spillstatus til false, slik at ingen spillere får plassere
