@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grade Calculator</title>
+    
+        <script>
+            function doubleMe()
+            {
+                var number;
+                var total;
+                
+                number = document.getElementById('txtnumber').value;
+                
+                number = Number(number);
+                total = number * 2;
+                
+                console.log("number(): " + number +  " " + total);
+                
+                
+                number = document.getElementById('txtnumber').value;
+                number = parseInt(number);
+                total = number * 2;
+                
+                console.log("parseInt(): " + number + " " + total);
+                
+                number = document.getElementById('txtnumber').value;
+                number = parseFloat(number);    
+                total = number * 2;
+                
+                console.log("parseFloat(): " + number + " " + total);
+                
+                document.getElementById('divOutput').innerHTML = total;
+            }
+            </script>
+    </head>
+    
+    <body>
+        <h1>Grade Calculator</h1>
+        
+        Term 1 Mark: <input type = 'text' id = 'txtnumber' /><br><br>
+        Term 2 Mark: <input type = 'text' id = 'txtnumber' /><br><br>
+        Term 3 Mark: <input type = 'text' id = 'txtnumber' /><br><br>
+        Final Exam Mark: <input type = 'text' id = 'txtnumber' /><br><br>
+        Term 1 Percentage: <input type = 'text' id = 'txtnumber' /><br><br>
+        Term 2 Percentage: <input type = 'text' id = 'txtnumber' /><br><br>
+        Term 3 Percentage: <input type = 'text' id = 'txtnumber' /><br><br>
+        
+        <input type = 'button' value = 'Press Me' onclick = 'doubleMe();' /><br><br>
+        
+        <div id = 'divOutput'></div>
+    </body>
+</html>
